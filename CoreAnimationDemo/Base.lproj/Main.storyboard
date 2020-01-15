@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtR-DZ-d5q" customClass="ShakingTextField" customModule="CoreAnimationDemo" customModuleProvider="target">
+                                <rect key="frame" x="50" y="70" width="275" height="40"/>
+                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MfP-dK-Wtz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="d9n-3u-kix"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qa7-mX-evj">
+                                <rect key="frame" x="117.5" y="273.5" width="140" height="140"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RAVINDRA - Copy" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-dt-eKU">
+                                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="b2m-dt-eKU" secondAttribute="trailing" constant="20" id="556-Re-kC9"/>
+                                    <constraint firstItem="b2m-dt-eKU" firstAttribute="leading" secondItem="Qa7-mX-evj" secondAttribute="leading" constant="20" id="OKc-tW-2cg"/>
+                                    <constraint firstAttribute="height" constant="140" id="duu-ar-ZfK"/>
+                                    <constraint firstAttribute="bottom" secondItem="b2m-dt-eKU" secondAttribute="bottom" constant="20" id="jpv-cl-vzf"/>
+                                    <constraint firstItem="b2m-dt-eKU" firstAttribute="top" secondItem="Qa7-mX-evj" secondAttribute="top" constant="20" id="jsG-M8-jrz"/>
+                                    <constraint firstAttribute="width" constant="140" id="pfe-qt-cTi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vtR-DZ-d5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6y7-KW-g1F"/>
+                            <constraint firstItem="Qa7-mX-evj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aZe-PK-9CS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vtR-DZ-d5q" secondAttribute="trailing" constant="50" id="avU-73-2mj"/>
+                            <constraint firstItem="vtR-DZ-d5q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="d3K-E9-9NZ"/>
+                            <constraint firstItem="Qa7-mX-evj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ljk-y2-nB7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="avtarImageView" destination="b2m-dt-eKU" id="f7v-F7-G5F"/>
+                        <outlet property="userTextField" destination="vtR-DZ-d5q" id="kMT-Ia-jGa"/>
+                        <outlet property="viewOutlet" destination="Qa7-mX-evj" id="aYB-6O-PtG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RAVINDRA - Copy" width="85" height="113.27999877929688"/>
+    </resources>
+</document>
